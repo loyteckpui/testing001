@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>P54.js Example</title>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script> -->
+<script src="p5.js"></script>
+			
+</head>
+
+<body>
+<script>
+
+function setup() {
+  createCanvas(710, 400, WEBGL);
+}
+
+function draw() {
+  background(250);
+
+
+  normalMaterial();
+  push();
+  translate(mouseX-width/2, mouseY-height/2, 0);
+  rotateX(frameCount * 0.1);
+  plane(70);
+  pop();
+
+  push();
+  translate(0, -100, 0);
+  rotateZ(frameCount * 0.01);
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.01);
+  box(70, 70, 70);
+  pop();
+
+  push();
+  translate(240, -100, 0);
+  rotateZ(frameCount * 0.01);
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.01);
+  cylinder(70, 70);
+  pop();
+
+
+  push();
+  translate(-240, 100, 0);
+  rotateZ(frameCount * 0.01);
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.01);
+  cone(70, 70);
+  pop();
+
+  push();
+  translate(0, 100, 0);
+  rotateZ(frameCount * 0.01);
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.01);
+  torus(70, 20);
+  pop();
+
+  push();
+  translate(240, 100, 0);
+  rotateZ(frameCount * 0.01);
+  rotateX(frameCount * 0.01);
+  rotateY(frameCount * 0.01);
+  sphere(70);
+  pop();
+}
+
+
+</script>
+
+</body>
+</html>
