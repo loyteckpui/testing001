@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>P54.js Example</title>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script> -->
+<script src="p5.js"></script>
+			
+</head>
+
+<body>
+
+<h1>A View with A Room</h1>
+
+<a href="P5JS_006_loadModel_room_entrance.html">
+<img src="assets\room plan.jpeg" style="width:200px;height:200px;">
+</a>
+
+
+
+<script>
+
+let room;
+
+function preload() {
+	room = loadModel('assets/room_test_inv_mir.obj');
+
+}
+
+function setup() {
+//  createCanvas(1000, 400, WEBGL);
+  createCanvas(windowWidth/2, windowHeight/2, WEBGL);
+}
+
+function draw() {
+  background(200);
+  
+  orbitControl(10,10,0.10);
+
+	// noStroke();
+
+  normalMaterial();
+  ambientLight(255); // white light
+//  ambientMaterial(255, 0, 255); // pink material
+
+
+  push();
+  model(room);
+  pop();
+
+
+//  push();
+//  translate(mouseX-width/2,mouseY-height/2);
+//  plane(100);
+//  pop();
+  
+
+
+}
+</script>
+
+</body>
+</html>
